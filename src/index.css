@@ -1,0 +1,18 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.ant-drawer-body {
+  padding: 0 !important;
+}
+
+.ant-tabs-nav {
+  margin-bottom: 0 !important;
+}
+
+.ant-tabs-tab-active div {
+  color: rgb(22 163 74) !important;
+}
+.ant-tabs .ant-tabs-ink-bar {
+  background: rgb(22 163 74) !important;
+}
