@@ -2,6 +2,7 @@ import { Avatar, Button, Tabs, Drawer } from 'antd'
 import Search from 'antd/es/input/Search'
 import { useState } from 'react'
 import type { TabsProps } from 'antd';
+import ItemFirstPage from './ItemsTabHeader/ItemFirstPage';
 
 
 type ItemsProps = {
@@ -47,7 +48,7 @@ const HeaderExcel = () => {
         {
             key: '2',
             label: `Trang đầu`,
-            children: <ItemsTab item={["Thiết lập trang", "Vùng in", "Vẽ"]} />,
+            children: <ItemFirstPage />,
         },
         {
             key: '3',
@@ -72,22 +73,28 @@ const HeaderExcel = () => {
     ];
 
 
+
+
     return (
         <div>
-            <div className='flex flex-row justify-between items-center bg-green-600 p-3'>
-                <div>logo</div>
-                <Search className='w-1/3 hidden md:inline' placeholder='Search' />
+            <div className='flex flex-row justify-between items-center bg-green-700 p-3'>
                 <div>
-                    <Avatar>Q</Avatar>
+                    <img src='https://quanlychung.timviec365.vn/img/logo_qly.png' alt='logo' className='h-[30px]' />
+                </div>
+                <Search className='w-1/4 hidden md:inline' placeholder='Search' />
+                <div>
+                    <Avatar src='https://img6.thuthuatphanmem.vn/uploads/2022/04/16/anh-blackpink-rose_042753244.jpg'>Q</Avatar>
                 </div>
             </div>
-            <div className='flex flex-col lg:flex-row justify-between px-3'>
-                <Tabs activeKey={activeKey} items={items} onChange={onChange} />
+            <div className='flex flex-col xl:flex-row justify-between px-3'>
+                <div className='flex-auto'>
+                    <Tabs activeKey={activeKey} items={items} onChange={onChange} tabBarStyle={{ paddingLeft: 8 }} />
+                </div>
                 <div className='pt-2'>
-                    <Button>Chú thích</Button>
-                    <Button>Cập nhập</Button>
-                    <Button>Chỉnh sửa</Button>
-                    <Button>Chia sẻ</Button>
+                    <Button className='text-green-600 font-semibold'>Chú thích</Button>
+                    <Button className='text-green-600 font-semibold'>Cập nhập</Button>
+                    <Button className='text-green-600 font-semibold'>Chỉnh sửa</Button>
+                    <Button type='primary' className='bg-green-600'>Chia sẻ</Button>
                 </div>
             </div>
             <Drawer

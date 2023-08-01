@@ -16,3 +16,33 @@
 .ant-tabs .ant-tabs-ink-bar {
   background: rgb(22 163 74) !important;
 }
+
+.ant-menu-item-selected {
+color: rgb(22 163 74) !important;
+}
+
+.ant-menu .ant-menu-ink-bar {
+  background: rgb(22 163 74) !important;
+}
+.ant-menu-horizontal {
+  border-bottom: 0;
+}
+.ant-menu-horizontal .ant-menu-item{
+  padding-inline: 8px !important;
+}
+
+.ant-menu-item-selected::after {
+  border-bottom-width: 0 !important;
+  /* border-color: rgb(22 163 74) !important; */
+}
+.ant-menu-horizontal>.ant-menu-item::after,
+.ant-menu-horizontal>.ant-menu-submenu::after {
+  border-bottom: none !important;
+  /* transition: none !important; */
+}
+.ant-menu-title-content{
+  margin: 0 !important;
+}
+/* .ant-menu-item-icon{
+  font-size: 22px !important;
+} */

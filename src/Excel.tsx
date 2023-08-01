@@ -5,6 +5,7 @@ import HeaderExcel from './HeaderExcel';
 import CaculatorExcel from './CaculatorExcel';
 import { Provider } from 'react-redux';
 import { store } from './storeExel';
+import SheetsExcel from './SheetsExcel';
 
 const Excel: React.FC = () => {
 
@@ -16,6 +17,7 @@ const Excel: React.FC = () => {
           <HeaderExcel />
           <CaculatorExcel />
           <TableExel />
+          <SheetsExcel />
         </div>
       </div>
     </Provider>
